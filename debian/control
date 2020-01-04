@@ -1,0 +1,16 @@
+Source: omvextras-unionbackend
+Section: net
+Priority: optional
+Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+XB-Plugin-Section: filesystems
+
+Package: omvextras-unionbackend
+Architecture: all
+Depends: mergerfs,
+         openmediavault (>= 5.2),
+         ${misc:Depends}
+Conflicts: openmediavault-unionfilesystems (<< 5.1)
+Description: union filesystems backend plugin for openmediavault
+ Adds mergerfs backend to openmediavault for plugins to use.

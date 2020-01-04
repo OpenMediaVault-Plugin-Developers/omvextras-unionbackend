@@ -1,0 +1,5 @@
+omvextras-unionbackend (5.0) stable; urgency=low
+
+  * Separate filesystem backend from unionfilesystems plugin
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 04 Jan 2020 10:47:48 -0600
