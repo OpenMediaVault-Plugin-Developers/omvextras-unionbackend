@@ -35,11 +35,6 @@ class Union implements FilesystemInterface, SharedFolderCandidateInterface
     /**
      * @var string
      */
-    private $dataModelPath = 'conf.service.unionfilesystems.filesystem';
-
-    /**
-     * @var string
-     */
     private $label;
 
     /**

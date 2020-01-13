@@ -1,3 +1,9 @@
+omvextras-unionbackend (5.0.1) stable; urgency=low
+
+  * Update for mergerfsfolders plugin
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 13 Jan 2020 12:55:38 -0600
+
 omvextras-unionbackend (5.0) stable; urgency=low
 
   * Separate filesystem backend from unionfilesystems plugin

@@ -64,8 +64,17 @@ class Mergerfs extends UnionAbstract
             $uuid = self::extractUuidFromMountPoint($mountPoint);
         }
 
-        $object = $this->database->get($this->dataModelPath, $uuid);
-        $mountPointObject = $this->database->get($this->mountPointDataModelPath, $object->get('self_mntentref'));
+        try {
+            $object = $this->database->get($this->dataModelPath, $uuid);
+            $mountPointObject = $this->database->get($this->mountPointDataModelPath, $object->get('self_mntentref'));
+        } catch (Exception $e) {
+        }
+
+        try {
+            $object = $this->database->get($this->dataModelPath2, $uuid);
+            $mountPointObject = $this->database->get($this->mountPointDataModelPath, $object->get('mntentref'));
+        } catch (Exception $e) {
+        }
 
         return new Union($object->get('uuid'), $mountPointObject->get('dir'), $object->get('name'), $this);
     }
