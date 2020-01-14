@@ -48,8 +48,14 @@ abstract class UnionAbstract extends BackendAbstract
     public function enumerate()
     {
         $filesystems = [];
+        $objects = [];
+        $objects2 = [];
 
-        $objects = $this->database->get($this->dataModelPath);
+        try {
+            $objects = $this->database->get($this->dataModelPath);
+        } catch (Exception $e) {
+            $objects = [];
+        }
         foreach ($objects as $object) {
             $filesystem = $this->getImpl($object->get('uuid'));
 
@@ -61,7 +67,11 @@ abstract class UnionAbstract extends BackendAbstract
             ];
         }
 
-        $objects2 = $this->database->get($this->dataModelPath2);
+        try {
+            $objects2 = $this->database->get($this->dataModelPath2);
+        } catch (Exception $e) {
+            $objects2 = [];
+        }
         foreach ($objects2 as $object) {
             $filesystem = $this->getImpl($object->get('uuid'));
 

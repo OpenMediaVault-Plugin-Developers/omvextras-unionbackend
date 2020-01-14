@@ -1,3 +1,10 @@
+omvextras-unionbackend (5.0.2) stable; urgency=low
+
+  * Fix for when both unionfilesystems and mergerfsfolders plugins are
+    not installed.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 14 Jan 2020 06:22:37 -0600
+
 omvextras-unionbackend (5.0.1) stable; urgency=low
 
   * Update for mergerfsfolders plugin
